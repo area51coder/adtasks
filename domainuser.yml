@@ -17,4 +17,4 @@
         domain_username: Administrator
         domain_password: B@ond222B@ond000
         domain_server: AREA51.COM
-      delegate_to: localhost
+     # delegate_to: localhost
