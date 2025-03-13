@@ -3,6 +3,8 @@
   hosts: "{{ win }}"
   #connection: local
   gather_facts: false
+  collections:
+    - microsoft.ad
   tasks:
     - name: Ensure user is created and use custom credentials to create the user
       microsoft.ad.user:
