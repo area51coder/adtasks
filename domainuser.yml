@@ -4,10 +4,10 @@
   #connection: local
   gather_facts: false
   collections:
-    - microsoft.ad
+    - windows
   tasks:
     - name: Ensure user is created and use custom credentials to create the user
-      microsoft.ad.user:
+      win_domain_user:
         identity: area51coders
         firstname: ravi
         surname: yadav
