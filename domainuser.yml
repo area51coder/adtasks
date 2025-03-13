@@ -1,14 +1,14 @@
 ---
 - tasks:
-- name: Ensure user is created and use custom credentials to create the user 
-  microsoft.ad.user: 
-    identity: area51coders
-    firstname: ravi
-    surname: yadav
-    password: "{{ lookup('password', '/dev/null length=24 chars=ascii_letters,digits,special') }}" 
-    path: ou=group,dc=domain,dc=com 
-    state: present 
-    domain_username: Administrator 
-    domain_password: B@ond222B@ond000
-    domain_server: AREA51.COM
-  delegate_to: localhost
+    - name: Ensure user is created and use custom credentials to create the user
+      microsoft.ad.user:
+        identity: area51coders
+        firstname: ravi
+        surname: yadav
+        password: "{{ lookup('password', '/dev/null length=24 chars=ascii_letters,digits,special') }}"
+        path: ou=group,dc=domain,dc=com
+        state: present
+        domain_username: Administrator
+        domain_password: B@ond222B@ond000
+        domain_server: AREA51.COM
+      delegate_to: localhost
