@@ -5,7 +5,7 @@
   gather_facts: false
   tasks:
     - name: Ensure user is created and use custom credentials to create the user
-      microsoft.ad.user:
+      microsoft.ad:
         identity: area51coders
         firstname: ravi
         surname: yadav
